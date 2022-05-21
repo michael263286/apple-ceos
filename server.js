@@ -42,8 +42,8 @@ app.get('/ceos',(req,res)=>{
   })
 })
 
-app.get('/ceos/:ceo',(req,res)=>{
-  const ceo= data.ceos.find(c=> c.slug===req.params.slug)
+app.get('/ceos/:slug',(req,res)=>{
+  const ceo = data.ceos.find(f=> f.slug === req.params.slug)
   
   if(!ceo){
     res.status(404).send(`Could not find ceo: ${req.params.slug}`)
@@ -53,7 +53,7 @@ app.get('/ceos/:ceo',(req,res)=>{
     partials,
     locals:{
       ceo,
-      title:`${ceo.slug} the billionaire`
+      title:`${ceo.name} the billionaire`
     }
   })
 })

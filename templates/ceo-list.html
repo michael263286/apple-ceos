@@ -11,7 +11,7 @@
   <ul>
     ${ceos.map((ceo) => {
       return `
-      <li><a href="/ceos/${ceo.username}">${ceo.name}</a></li>
+      <li><a href="/ceos/${ceo.slug}">${ceo.name}</a></li>
       `
     }).join('')}
   </ul>

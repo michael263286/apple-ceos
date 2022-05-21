@@ -47,8 +47,8 @@ const ceos = [
     slug: 'tim_cook',
     name: 'Tim Cook',
     year: '2011',
-  },
-];
+  }
+]
 
 module.exports = {
   ceos
